@@ -1,0 +1,15 @@
+<table class="table table-sm table-dark">
+    <tr *ngFor="let employee of employeeservice.EmployeeLists">
+        <td>{{employee.EmployeeName}}-{{employee.EmployeeCode}}</td>
+        <td>{{employee.EmployeeTP}}</td>
+        <td>{{employee.EmployeeEmail}}</td>
+        <td>
+            <a class="btn text-info" (click)="editEmployee(employee)">
+                <i class="fa fa-pencil"></i>
+            </a>
+            <a class="btn text-danger" (click)="OnDelete(employee.EmployeeID)">
+                <i class="fa fa-trash"></i>
+            </a>
+        </td>
+    </tr>
+</table>

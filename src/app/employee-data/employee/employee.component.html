@@ -1,0 +1,45 @@
+<form class="emp-forms" #employeeForms="ngForm" (ngSubmit)="onSubmit(employeeForms)">
+   <div *ngIf="employeeservice.SelectedEmployee.EmployeeID!=null">
+    <input type="hidden" class="form-control" name="EmployeeID" #EmployeeID="ngModel"
+    [(ngModel)]="employeeservice.SelectedEmployee.EmployeeID" placeholder="EmployeeID">
+
+   </div>
+     
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" name="EmployeeName" #EmployeeName="ngModel"
+                [(ngModel)]="employeeservice.SelectedEmployee.EmployeeName" placeholder="EmployeeName">
+        </div>
+
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" name="EmployeeCode" #EmployeeCode="ngModel"
+                [(ngModel)]="employeeservice.SelectedEmployee.EmployeeCode" placeholder="EmployeeCode">
+        </div>
+
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" name="EmployeeTP" #EmployeeCode="ngModel"
+                [(ngModel)]="employeeservice.SelectedEmployee.EmployeeTP" placeholder="EmployeeTP">
+        </div>
+
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" name="EmployeeEmail" #EmployeeEmail="ngModel"
+                [(ngModel)]="employeeservice.SelectedEmployee.EmployeeEmail" placeholder="EmployeeEmail">
+        </div>
+        <div class="form-group col-md-8">
+            <button type="submit"  class="btn btn-info btn-lg btn-block">
+                Submit
+            </button>
+        </div>
+        <div class="form-group col-md-4">
+            <button type="button" class="btn btn-dark btn-lg btn-block" (click)="resetButton(employeeForms)">
+                Reset
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+</form>

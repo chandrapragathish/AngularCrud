@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angemployee"
+    }
+  },
+  "defaultProject": "angemployee",
+  "cli": {
+    "analytics": false
+  }
 }
